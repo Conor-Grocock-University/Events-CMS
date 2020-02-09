@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    Home page
+
+
+You are logged in!
+
 @endsection
