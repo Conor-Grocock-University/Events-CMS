@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Carbon;
+
 use App\Event;
+use App\Events\EventInterested;
+
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -39,6 +43,7 @@ class EventController extends Controller
     {
         $event = new Event();
         $event->name = $request->name;
+        $event->start_date = $request->input('start-date', \Carbon\Carbon::now());
         $event->save();
     }
 
@@ -89,8 +94,12 @@ class EventController extends Controller
 
     public function interest(int $id)
     {
+        $user = Auth::user();
         $event = Event::find($id);
-        $event->interested()->attach(Auth::user()->id);
+
+        $event->interested()->attach($user->id);
+        event(new EventInterested($event, $user));
+
         return redirect()->back();
     }
 }
