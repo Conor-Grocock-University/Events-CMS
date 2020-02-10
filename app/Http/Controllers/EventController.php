@@ -43,6 +43,7 @@ class EventController extends Controller
     {
         $event = new Event();
         $event->name = $request->name;
+        $event->description = $request->description;
         $event->start_date = $request->input('start-date', \Carbon\Carbon::now());
         $event->save();
     }

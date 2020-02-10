@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddStartDateToEvent extends Migration
+class AddDescriptionToEvent extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddStartDateToEvent extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->datetime('start_date')->after('description')->default(\Carbon\Carbon::now());
+            $table->longText('description')->after('name');
         });
     }
 
@@ -26,7 +26,7 @@ class AddStartDateToEvent extends Migration
     public function down()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('start_date');
+            $table->dropColumn('description');
         });
     }
 }

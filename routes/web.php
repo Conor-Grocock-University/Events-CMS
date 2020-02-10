@@ -44,6 +44,6 @@ Auth::routes();
 Route::get('/mail/events', function () {
     $event = App\Event::find(1);
 
-    return (new App\Notifications\EventInterested($event))
+    return (new App\Notifications\EventReminder($event))
                 ->toMail(Auth::user());
 });

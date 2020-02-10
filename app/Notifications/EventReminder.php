@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use \App\Event;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -16,9 +17,9 @@ class EventReminder extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Event $event)
     {
-        //
+        $this->event = $event;
     }
 
     /**
@@ -40,7 +41,9 @@ class EventReminder extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->markdown('mail.events.Reminder');
+        $event = $this->event;
+
+        return (new MailMessage)->markdown('mail.events.Reminder', ["event" => $event]);
     }
 
     /**

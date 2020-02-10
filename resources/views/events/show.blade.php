@@ -7,3 +7,5 @@
         disabled
     @endif>
 </form>
+
+{!! $event->description !!}

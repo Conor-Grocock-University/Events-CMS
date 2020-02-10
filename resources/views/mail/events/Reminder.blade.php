@@ -1,12 +1,10 @@
 @component('mail::message')
-# Introduction
+# You've got an event comming up
 
-The body of your message.
+{{ $event->name }} is coming up tommorrow. We didn't want you to forget.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+@include('partials.event', ["event" => $event])
 
-Thanks,<br>
+Hope to see you there,<br>
 {{ config('app.name') }}
 @endcomponent
