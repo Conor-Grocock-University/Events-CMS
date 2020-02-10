@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Auth;
 use Carbon;
 
-use App\Event;
-use App\Events\EventInterested;
+use \App\Event;
+use \App\Events\EventInterested;
 
 use Illuminate\Http\Request;
 
@@ -19,8 +19,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = App\Event::All();
-        return view('events/list', $events);
+        $events = Event::orderBy('start_date', 'desc')->get();
+        return view('events/list', ["events" => $events]);
     }
 
     /**
@@ -42,10 +42,17 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $event = new Event();
+        $user = Auth::user();
+
         $event->name = $request->name;
         $event->description = $request->description;
         $event->start_date = $request->input('start-date', \Carbon\Carbon::now());
+        $event->creator_id = $user->id;
+
         $event->save();
+
+        event(new EventInterested($event, $user));
+        return redirect()->route('events.show', ["event"=>$event->id]);
     }
 
     /**

@@ -3,7 +3,7 @@
 
 {{ $event->name }} is coming up tommorrow. We didn't want you to forget.
 
-@include('partials.event', ["event" => $event])
+@include('mail.partials.event', ["event" => $event])
 
 Hope to see you there,<br>
 {{ config('app.name') }}

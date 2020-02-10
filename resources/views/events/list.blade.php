@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-
-{{ $user->email }}
+@each('partials.event', $events, 'event')
 @endsection

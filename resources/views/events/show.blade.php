@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 {{ $event->name }}
 
 <form method="post" action="{{ route('events.interested', $event->id) }}">
@@ -9,3 +13,4 @@
 </form>
 
 {!! $event->description !!}
+@endsection
