@@ -1,0 +1,40 @@
+form {
+  width: 100%;
+}
+
+.details {
+  width: 100%;
+}
+
+.details .form-group {
+  width: 80%;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+.details .form-group label {
+  display: block;
+  font-size: 1em;
+}
+
+.details .form-group input {
+  line-height: 2em;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+}
+
+.details .form-group input:focus {
+  border: 2px solid lightblue;
+}
+
+.details .form-group-inline {
+  width: 80%;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+.details .form-group-inline input {
+  margin: 5px;
+}
+

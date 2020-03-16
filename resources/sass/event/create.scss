@@ -1,0 +1,25 @@
+.full_width {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+
+    .tox {
+        flex-grow: 8;
+        min-width: 300px;
+        margin: 10px;
+    }
+
+    #map {
+        flex-grow: 2;
+        min-width: 300px;
+        height: 400px;
+        margin: 10px;
+    }
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}

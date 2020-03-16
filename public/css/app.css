@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: #e6edf4;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #b1c7dd 2px solid;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  padding: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+nav .brand {
+  padding: 10px;
+}
+
+nav .central .nav-item {
+  display: inline;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+nav .user #dropdown {
+  position: absolute;
+  top: 49px;
+  right: 0;
+  background: #e6edf4;
+  padding: 10px;
+  border-bottom: #b1c7dd 2px solid;
+  border-left: #b1c7dd 2px solid;
+}
+
+nav .user #dropdown a {
+  display: block;
+  padding: 7.5px;
+}
+
+nav .user #dropdown hr.divider {
+  border-color: #b1c7dd;
+}
+
+nav .user #dropdown.hidden {
+  display: none;
+}
+
+nav a {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgba(26, 26, 26, 0.75);
+  text-decoration: underline;
+}
+
+.event {
+  width: 20%;
+}
+
+.event span {
+  display: block;
+}
+
+.event .event-image {
+  width: 100%;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content #title {
+  width: 100%;
+  font-size: x-large;
+  text-transform: capitalize;
+  text-align: center;
+  padding-bottom: 40px;
+}
+

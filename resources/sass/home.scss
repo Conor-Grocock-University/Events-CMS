@@ -1,0 +1,42 @@
+.tag-row {
+    width: 100%;
+    margin: 20px;
+    background: rgba(243, 243, 243, 0.247);
+
+    .row-heading {
+        font-size: 1.3em;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .events {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: scroll;
+        font-style: normal;
+
+        .event {
+            width: 20%;
+            margin: 20px;
+
+            span {
+                display: block;
+            }
+
+            .event-image {
+                width: 100%;
+            }
+        }
+
+        .empty {
+            width: 100%;
+            text-align: center;
+
+            a {
+                color: inherit;
+            }
+
+        }
+    }
+}

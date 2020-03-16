@@ -1,0 +1,54 @@
+.events {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    font-style: normal;
+    justify-content: space-between;
+}
+
+.ais-Hits-item {
+    width: unset !important;
+}
+
+.ais-InstantSearch {
+   width: 100%;
+}
+
+.event {
+    width: 100% !important;
+    display: flex;
+
+    .event-image {
+        position: relative;
+
+        $size: 50px;
+        width: $size !important;
+        height: $size !important;
+
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .event-info {
+        margin: 10px;
+    }
+}
+
+.search-container {
+    display: flex;
+    width: 100%;
+
+    div {
+        margin: 20px;
+    }
+
+    .filters {
+        width: 20%;
+    }
+
+    .results {
+        width: 80%;
+    }
+}

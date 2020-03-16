@@ -1,0 +1,18 @@
+.content {
+    width: 80%;
+
+    margin: 0 auto;
+    margin-top: 40px;
+
+    #title {
+        width: 100%;
+        font-size: x-large;
+        text-transform: capitalize;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

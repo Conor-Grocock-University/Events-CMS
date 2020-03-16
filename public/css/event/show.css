@@ -1,0 +1,78 @@
+.side_panel {
+  width: 20%;
+}
+
+.side_panel .interested {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.side_panel .interested input[type=submit] {
+  width: 100%;
+  height: 2em;
+  font-size: 1.1em;
+}
+
+.side_panel .tags {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.side_panel .tags .tag {
+  color: inherit;
+  padding: 4px;
+  margin: 5px;
+  border: #c4c4c4 1px solid;
+  text-transform: capitalize;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.side_panel .map {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.description {
+  width: 80%;
+}
+
+.recommendations {
+  width: 100%;
+}
+
+.recommendations h3 {
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+}
+
+.recommendations .events {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  font-style: normal;
+}
+
+.recommendations .events .event {
+  width: 20%;
+  margin: 20px;
+}
+
+.recommendations .events .event a {
+  color: inherit;
+}
+
+.recommendations .events .event span {
+  display: block;
+}
+
+.recommendations .events .event .event-image {
+  width: 100%;
+}
+

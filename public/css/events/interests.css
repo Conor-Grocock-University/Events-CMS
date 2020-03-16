@@ -1,0 +1,24 @@
+.event {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.event .event-image {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.event .event-info {
+  margin: 10px;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.event .event-info a {
+  color: inherit;
+  font-size: 1.2em;
+}
+

@@ -1,0 +1,42 @@
+.tag-row {
+  width: 100%;
+  margin: 20px;
+  background: rgba(243, 243, 243, 0.247);
+}
+
+.tag-row .row-heading {
+  font-size: 1.3em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.tag-row .events {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  font-style: normal;
+}
+
+.tag-row .events .event {
+  width: 20%;
+  margin: 20px;
+}
+
+.tag-row .events .event span {
+  display: block;
+}
+
+.tag-row .events .event .event-image {
+  width: 100%;
+}
+
+.tag-row .events .empty {
+  width: 100%;
+  text-align: center;
+}
+
+.tag-row .events .empty a {
+  color: inherit;
+}
+

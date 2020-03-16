@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 7011:3306
+    environment:
+      MYSQL_DATABASE: events
+      MYSQL_USER: RvLZfbjRnacR39pq 
+      MYSQL_PASSWORD: NQ8VrEnaiV2nb4rS
+      MYSQL_ROOT_PASSWORD: password
+
