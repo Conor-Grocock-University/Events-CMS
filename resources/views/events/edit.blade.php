@@ -45,7 +45,7 @@
 @endsection
 
 @section('scripts')
-    <script src="https://cdn.tiny.cloud/1/y2m6ffwzu04ijs5vyy5zaxztv56m122l975zblfk61k3omqv/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
+    <script src="https://cdn.tiny.cloud/1/o7o92xdgyi42506wphcfkscjugj1p54qm2bycxih0za667kd/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
     <script>tinymce.init({
         selector:'textarea',
         height: 400,

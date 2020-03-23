@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $tags = Tag::all();
+	$tags = Tag::limit(5)->get();
         return view('home', ["tags" => $tags]);
     }
 }

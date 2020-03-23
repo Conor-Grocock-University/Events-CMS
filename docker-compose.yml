@@ -9,4 +9,5 @@ services:
       MYSQL_USER: RvLZfbjRnacR39pq 
       MYSQL_PASSWORD: NQ8VrEnaiV2nb4rS
       MYSQL_ROOT_PASSWORD: password
-
+    volumes:
+      - ./:/var/lib/mysql
